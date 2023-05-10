@@ -7,6 +7,7 @@ import { switchPage } from "./redux/actions/activePageActions";
 import Contact from "./pages/Contact";
 import Events from "./pages/Events";
 import About from "./pages/About";
+import ErrorPage from "./pages/ErrorPage";
 import { useState } from "react";
 function App() {
   const path = window.location.pathname;
@@ -57,7 +58,7 @@ function App() {
             <Contact showLinks={showLinks} setShowLinks={setShowLinks} />
           }
         />
-        ;
+        <Route path="/*" element={<ErrorPage />} />;
       </Routes>
     </Router>
   );
