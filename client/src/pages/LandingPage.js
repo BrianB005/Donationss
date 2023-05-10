@@ -7,7 +7,6 @@ import PinkButton from "../components/PinkButton";
 
 import { BsArrowRight } from "react-icons/bs";
 
-
 import Footer from "../components/Footer";
 import Modal from "../components/Modal";
 import Navbar from "../components/Navbar";
@@ -18,16 +17,11 @@ const LandingPage = ({ showLinks, setShowLinks }) => {
       "https://www.paypal.com/donate/?hosted_button_id=4QPQZUHK995GU"
     );
   };
-  
 
   return (
     <Wrapper>
       <Wrapper2>
-        <Navbar
-          showLinks={showLinks}
-          setShowLinks={setShowLinks}
-         
-        />
+        <Navbar showLinks={showLinks} setShowLinks={setShowLinks} />
         <ContentWrapper>
           {showLinks && <Modal onClick={() => setShowLinks(false)} />}
           <Left>
@@ -96,6 +90,7 @@ const Wrapper2 = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
+  margin-bottom: 60px;
   @media screen and (max-width: 1150px) {
     overflow-y: auto;
     &::-webkit-scrollbar {

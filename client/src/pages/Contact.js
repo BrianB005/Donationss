@@ -165,6 +165,7 @@ const Form = styled.form`
   @media screen and (max-width: 700px) {
     width: 100%;
     flex-direction: column;
+    margin-bottom: 50px;
   }
 `;
 const Left = styled.div`
