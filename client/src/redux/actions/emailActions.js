@@ -10,12 +10,15 @@ export const sendMail = (email, name, title, message) => async (dispatch) => {
     payload: { name, email, title, message },
   });
   try {
-    const { data } = await axios.post("http://localhost:5000/api/v1/emails", {
-      name,
-      email,
-      title,
-      message,
-    });
+    const { data } = await axios.post(
+      "https://empower-her.herokuapp.com/api/v1/emails",
+      {
+        name,
+        email,
+        title,
+        message,
+      }
+    );
     dispatch({ type: SEND_MAIL_SUCCESS, payload: data });
   } catch (error) {
     dispatch({
