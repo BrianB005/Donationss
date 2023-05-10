@@ -10,7 +10,8 @@ import { BsArrowRight } from "react-icons/bs";
 import Footer from "../components/Footer";
 import Modal from "../components/Modal";
 import Navbar from "../components/Navbar";
-
+import { useDispatch } from "react-redux";
+import { switchPage } from "../redux/actions/activePageActions";
 const LandingPage = ({ showLinks, setShowLinks }) => {
   const handleClick = () => {
     window.open(
@@ -18,6 +19,7 @@ const LandingPage = ({ showLinks, setShowLinks }) => {
     );
   };
 
+  const dispatch = useDispatch();
   return (
     <Wrapper>
       <Wrapper2>
@@ -36,7 +38,7 @@ const LandingPage = ({ showLinks, setShowLinks }) => {
               <PinkButton title="Donate Now" onClick={handleClick} />
 
               <Link to="/about">
-                <Button>
+                <Button onClick={() => dispatch(switchPage("about"))}>
                   About us
                   <div>
                     <BsArrowRight />
