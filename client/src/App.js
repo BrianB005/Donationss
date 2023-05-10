@@ -14,7 +14,7 @@ function App() {
   const [showLinks, setShowLinks] = useState(false);
 
   const dispatch = useDispatch();
-  switch (path) {
+  switch (path.split("/")[1]) {
     case "/":
       dispatch(switchPage("home"));
       break;
