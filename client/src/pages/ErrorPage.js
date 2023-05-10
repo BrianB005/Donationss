@@ -37,8 +37,8 @@ const Image = styled.img`
   width: 50%;
   object-fit: cover;
   margin: auto;
-  @media screen and (max-width: 600px) {
-    width: 80%;
+  @media screen and (max-width: 900px) {
+    width: 100px;
     margin-top: 20px;
     object-fit: center;
   }
@@ -122,6 +122,10 @@ const Right1 = styled.div`
     rgb(230, 18, 117) 17.19%,
     rgb(237, 30, 117) 100%
   );
+
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
 `;
 const Right2 = styled.div`
   position: absolute;
@@ -132,6 +136,9 @@ const Right2 = styled.div`
   border-radius: 50%;
   background: linear-gradient(180deg, pink 17.19%, rgb(237, 30, 117) 100%);
   border-radius: 50%;
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
 `;
 const Left1 = styled.div`
   position: absolute;
@@ -144,6 +151,9 @@ const Left1 = styled.div`
   left: -337.63px;
   z-index: 200;
   bottom: -230px;
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
 `;
 const Left2 = styled.div`
   position: absolute;
@@ -155,5 +165,8 @@ const Left2 = styled.div`
   transform: rotate(-93.76deg);
   border-radius: 50%;
   z-index: 200;
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
 `;
 export default ErrorPage;
