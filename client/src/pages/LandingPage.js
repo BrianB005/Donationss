@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import don1 from "../images/don1.jpg";
 import don2 from "../images/don2.jpg";
+import don3 from "../images/don3.jpg";
+import don4 from "../images/don4.png";
 import { Link } from "react-router-dom";
 import PinkButton from "../components/PinkButton";
 
@@ -15,7 +17,8 @@ import { switchPage } from "../redux/actions/activePageActions";
 const LandingPage = ({ showLinks, setShowLinks }) => {
   const handleClick = () => {
     window.open(
-      "https://www.paypal.com/donate/?hosted_button_id=4QPQZUHK995GU"
+      // "https://www.paypal.com/donate/?hosted_button_id=4QPQZUHK995GU"
+      "https://www.paypal.com/donate/?hosted_button_id=452BWYVNBNL3J"
     );
   };
 
@@ -53,8 +56,8 @@ const LandingPage = ({ showLinks, setShowLinks }) => {
               <Image2 src={don2} alt=" image 2" />
             </Images>
             <Images>
-              <Image3 src={don2} alt=" image 3" />
-              <Image4 src={don1} alt=" image 4" />
+              <Image3 src={don4} alt=" image 3" />
+              <Image4 src={don3} alt=" image 4" />
             </Images>
           </Right>
         </ContentWrapper>
@@ -205,7 +208,7 @@ const Image1 = styled.img`
   margin-right: 20px;
   border-radius: 15px;
   object-fit: cover;
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 600px) {
     width: 100%;
   }
 `;
@@ -214,7 +217,8 @@ const Image2 = styled.img`
   height: 280px;
   object-fit: cover;
   border-radius: 15px;
-  @media screen and (max-width: 500px) {
+
+  @media screen and (max-width: 600px) {
     width: 100%;
   }
 `;
@@ -222,25 +226,25 @@ const Image3 = styled.img`
   width: 300px;
   height: 280px;
   border-radius: 15px;
-  object-fit: cover;
+  object-fit: contain;
   margin-right: 20px;
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 600px) {
     width: 100%;
   }
 `;
 const Image4 = styled.img`
   width: 350px;
   height: 280px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 15px;
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 600px) {
     width: 100%;
   }
 `;
 const Images = styled.div`
   display: flex;
   margin-bottom: 20px;
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 600px) {
     display: grid;
     grid-column-gap: 20px;
     grid-template-columns: repeat(2, 1fr);

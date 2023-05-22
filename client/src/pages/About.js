@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import don1 from "../images/don1.jpg";
 import don2 from "../images/don2.jpg";
+import don3 from "../images/don3.jpg";
+import don4 from "../images/don4.png";
 import Modal from "../components/Modal";
 import Navbar from "../components/Navbar";
 const About = ({ showLinks, setShowLinks }) => {
@@ -29,8 +31,8 @@ const About = ({ showLinks, setShowLinks }) => {
         <Right>
           <Image src={don1} alt=" image " />
           <Image src={don2} alt=" image " />
-          <Image src={don2} alt=" image " />
-          <Image src={don1} alt=" image " />
+          <Image src={don3} alt=" image " />
+          <Image src={don4} alt=" image " />
         </Right>
       </ContentWrapper>
     </Wrapper>
@@ -88,7 +90,7 @@ const Right = styled.div`
   }
 `;
 const Image = styled.img`
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 15px;
   height: 100%;
   width: 100%;

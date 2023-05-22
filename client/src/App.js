@@ -12,6 +12,8 @@ import { switchPage } from "./redux/actions/activePageActions";
 import Contact from "./pages/Contact";
 import Events from "./pages/Events";
 import About from "./pages/About";
+import Cancel from "./pages/Cancel";
+import Success from "./pages/Success";
 import ErrorPage from "./pages/ErrorPage";
 import { useState, useEffect } from "react";
 
@@ -33,6 +35,12 @@ const AppWrapper = () => {
         break;
       case "/contact":
         dispatch(switchPage("contact"));
+        break;
+      case "/success":
+        dispatch(switchPage("success"));
+        break;
+      case "/cancel":
+        dispatch(switchPage("cancel"));
         break;
       default:
         dispatch(switchPage("home"));
@@ -63,6 +71,14 @@ const AppWrapper = () => {
       <Route
         path="/contact"
         element={<Contact showLinks={showLinks} setShowLinks={setShowLinks} />}
+      />
+      <Route
+        path="/cancel"
+        element={<Cancel showLinks={showLinks} setShowLinks={setShowLinks} />}
+      />
+      <Route
+        path="/success"
+        element={<Success showLinks={showLinks} setShowLinks={setShowLinks} />}
       />
       <Route path="/*" element={<ErrorPage />} />;
     </Routes>

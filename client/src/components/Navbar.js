@@ -13,7 +13,8 @@ const Navbar = ({ showLinks, setShowLinks }) => {
   };
   const handleClick = () => {
     window.open(
-      "https://www.paypal.com/donate/?hosted_button_id=4QPQZUHK995GU"
+      // "https://www.paypal.com/donate/?hosted_button_id=4QPQZUHK995GU"
+      "https://www.paypal.com/donate/?hosted_button_id=452BWYVNBNL3J"
     );
   };
 
